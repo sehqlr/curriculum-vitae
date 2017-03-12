@@ -1,0 +1,152 @@
+% This is a resume for Sam Hatfield.
+% META
+\documentclass[11pt]{article}
+\title{\bfseries\Huge Sam Hatfield}
+\author{samuel.e.hatfield+resume@gmail.com}
+\date{}
+
+% package imports
+\usepackage[margin=2cm]{geometry}
+\usepackage{array, enumitem, xcolor}
+
+% this has been inspired by this blog post:
+% http://texblog.org/2012/04/25/writing-a-cv-in-latex/
+% Thank you.
+\definecolor{lightgray}{gray}{0.8}
+\newcolumntype{L}{>{\raggedleft}p{0.25\textwidth}}
+\newcolumntype{R}{p{0.7\textwidth}}
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
+
+\begin{document}
+
+% PREAMBLE
+\maketitle \noindent
+St. Louis, MO \hfill samhatfield.me \hfill github.com/sehqlr \\
+
+\section*{Skills}
+\begin{tabular}{L!{\VRule}R}
+	Programming Languages&Python, Perl, Go\\
+	Databases&MySQL/MariaDB, PostgreSQL, Redis\\
+	DevOps tools&Vagrant, Docker, Ansible, SaltStack, systemd\\
+	Developer tools&git, bash, vim\\
+	Cloud Platforms&AWS, Google Compute Engine, DigitalOcean\\
+	\\ % a visual pause to separate technical and professional skills
+	Professionalism&strong work ethic in teams or alone, attention to detail and big pictures\\
+	Communication&mentoring \& tutoring experience, active listener, approachable demeanor\\
+	Personal Experimentation&arduino C, Haskell, Elm, Clojure, Rust, pandas, NLTK, R, Jupyter\\
+\end{tabular}
+
+\section*{Education}
+\begin{tabular}{L!{\VRule}R}
+	January--May 2014&CS50x Live, in association with LaunchCode and HarvardX\\
+	2008--2010&BA in English \& Certificate of Creative Writing, USML\\
+	2005--2008&AA in English, East Central College\\
+\end{tabular}
+
+\section*{Experience}
+
+\subsection*{2016--2017: Monitoring Automation Engineer, CenturyLink}
+
+\subsubsection*{Position Details}
+This position is within the Monitoring Automation Team, under the Global Operations Center, currently contracted via TEKsystems
+
+\subsubsection*{Overview of Duties}
+\begin{itemize}[noitemsep,leftmargin=1em]
+	\item Improved and extended internal tools, with the goal of making the GOC more efficient at providing customer service
+	\item Manage release process on a rotating schedule with the team
+	\item Participate in an Agile process to ensure rapid execution and release of quality code
+\end{itemize}
+
+\subsubsection*{Notable Projects \& Accomplishments}
+\paragraph{Triage Tool Special Fields} a reimplementation of a subset of a RESTful API
+\begin{description}[noitemsep,leftmargin=1em]
+	\item [Problem] it was difficult to extend our RESTful API by adding top-level objects in our JSON documents, and making default values for certain "special fields" that were required for third-party API calls
+	\item [Solution] move these "special fields" from the top-level of the JSON document to a pre-existing \verb+field_data+ object, and add metadata to the special fields to programmatically extract them for the aforementioned third-party API
+	\item [Process] \begin{itemize}[noitemsep,leftmargin=0em]
+		\item[] % drop the unordered list underneath
+		\item Pair programmed with the project owner for this subcomponent
+		\item Discussed the cost/benefit trade-off for this code change with entire team
+		\item Iterated on implementation with feedback from team
+		\item Added versioning to the API to maintain backwards compatibility
+		\item Wrote unit tests, verified UI manually
+		\item Upon release, found a bug in the UI. Implemented and deployed a hotfix on the same day. Learned something.
+	\end{itemize}
+\end{description}
+
+% ASTERIS, LLC
+\subsection*{2015--2016: Junior Developer, Asteris, LLC}
+
+\subsubsection*{Overview of Duties}
+\begin{itemize}[noitemsep,leftmargin=1em]
+	\item Specified and implemented features during alpha and beta stages of Converge development
+	\item Implemented new testing features, such as acceptance testing, for Converge
+	\item Implemented an integration test harness for Mantl, using Travis CI and Python
+	\item Managed cloud resources on AWS, Google Compute Engine, DigitalOcean, and OpenStack
+	\item Assisted Mantl community users to configure Kafka, ELK, and Hadoop clusters
+	\item Lead small (1-3) teams of interns and apprentices for limited projects and on-boarding
+\end{itemize}
+\subsubsection*{Notable Projects \& Accomplishments}
+
+\paragraph{Converge} an API-first configuration management tool
+\begin{itemize}[noitemsep,leftmargin=1em]
+	\item Participated in design and architecture meetings
+	\item Specified, implemented type-based parameter constraint enforcement for converge HCL files
+	\item Performed code reviews
+	\item Implemented table tests for sub-packages and acceptance tests for compiled binary
+\end{itemize}
+
+\paragraph{Mantl Testing Harness} an integration test suite based on Travis CI and Python
+\begin{itemize}[noitemsep,leftmargin=1em]
+	\item Work on this project lasted for approximately a year
+	\item Coordinated with management to gather requirements for the test suite
+	\item Implemented fixes and features based on those requirements in Python
+	\item Configured the tests for the official providers: AWS, Google Compute Engine, DigitalOcean
+	\item Monitored resource usage during test harness runs
+	\item Often, managed resources by hand after tests completed their runs
+\end{itemize}
+
+\paragraph{Mantl Training}
+\begin{itemize}[noitemsep,leftmargin=1em]
+	\item Evangelized and educated users how they could build services, deploy software, and monitor their Mantl clusters quickly, and deploy Kafka, ELK, Hadoop, and more with addons
+	\item Trained new hires in usage of Ansible, Python, docker, and bash/ssh as required
+	\item Trained new hires in basics of Mantl components and operations
+	\item Trained new hires in usage of AWS, Google Compute Engine, DigitalOcean
+	\item Troubleshooted problems with community members
+\end{itemize}
+
+% REIBLACKBOOK.COM
+\subsection*{2014--2015: Junior Developer, REIBlackBook.com}
+
+\subsubsection*{Overview of Duties}
+\begin{itemize}[noitemsep,leftmargin=1em]
+	\item Was placed as an Apprentice Developer through LaunchCodeSTL
+	\item Starting December 1, transitioned from Apprentice Developer to salaried Junior Developer
+	\item Implemented business automation software for REIBB users, primarily real estate investors
+	\item Coded 70\% PHP server-side, 30\% Javascript client-side, from CRUD to minimal UI
+	\item Utilized in-house provisioning systems to deploy to production, stage, and dev virtual machines
+	\item Performed system administration tasks, such as altering code on remote WordPress instances
+	\item Performed database administration tasks, such as migrations, and altering data when required
+	\item Wrote acceptance test cases in Capybara, and unit/integration tests in PHPUnit
+	\item Handled support tickets regarding technical issues, and occasionally made phone calls
+\end{itemize}
+
+\subsubsection*{Notable Projects \& Accomplishments}
+
+\paragraph{Training Video Library} multi-stage improvements for video-based self-service support system
+\begin{itemize}[noitemsep,leftmargin=1em]
+	\item Self-directed full-stack development of code with specifications from management
+	\item Designed and implemented a RESTful API for CRUD operations on video files and metadata
+	\item Performed videos database table migrations for expanded video categorization
+	\item Designed and implemented browsing navigation for training videos, based on wireframes
+	\item Designed and implemented basic search engine for users to access content
+	\item Implemented shortlink autoplay feature for direct navigation to specific videos
+	\item Designed, implemented, and deployed content management interface to videos API
+\end{itemize}
+
+\paragraph{REI Page Builder} collection of Wordpress plugins for drag-and-drop website design
+\begin{itemize}[noitemsep,leftmargin=1em]
+	\item Coordinated with small team to implement and deploy plugin code over a 3 month period
+	\item Implemented merge field functionality for user marketing information
+	\item Migrated subset of Wordpress administration functions to external interface
+\end{itemize}
+\end{document}
